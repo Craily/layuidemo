@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>总体布局</title>
+<link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+<link rel="stylesheet" th:href="@{/css/layout/layout.css}">
+<link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+<link rel="bookmark" th:href="@{/favicon.ico}"/>
+<script type="text/javascript" th:src="@{/layui/layui.js}"></script>
+<script type="text/javascript" th:src="@{/js/layout/layout.js}"></script>
+</head>
+<body>
+	<input id="viewName" type="hidden" th:value="${viewName}" />
+	<div class="left_nav">
+		<div class="login_info">
+			<img alt="" th:src="@{/images/工勤宝管理系统/u692.svg}">
+			<span class="login_name">上官燕飞，欢迎您！</span>
+			<img class="u698" alt="" th:src="@{/images/工勤宝管理系统/u698.png}">
+			<dl class="u698_menu">
+		      <dd><img th:src="@{/images/工勤宝管理系统/退出系统_u730.png}"></dd>
+		      <dd><img th:src="@{/images/工勤宝管理系统/密码修改_u732.png}"></dd>
+		    </dl>
+		</div>
+		<ul class="layui-nav layui-nav-tree layui-bg-cyan layui-nav-width" lay-filter="nav-tree">
+			<li class="layui-nav-item">
+				<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/1_u660_selected.svg}">
+					<span>系统管理</span>
+				</a>
+				<dl class="layui-nav-child">
+					<dd><a th:href="@{/toview/emp}" id="emp">用户管理</a></dd>
+					<dd><a href="javascript:;">角色管理</a></dd>
+					<dd><a href="javascript:;">菜单管理</a></dd>
+					<dd><a href="javascript:;">公司管理</a></dd>
+					<dd><a href="javascript:;">部门管理</a></dd>
+					<dd><a href="javascript:;">字典管理</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/2_u625_selected.svg}">
+					<span>员工管理</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a th:href="@{/toview/dept}" id="dept">通过审核</a></dd>
+	      			<dd><a href="">通过审核</a></dd>
+	      			<dd><a href="">暂未审核</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/3_u623_selected.svg}">
+					<span>考勤管理</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a href="">考勤记录</a></dd>
+	      			<dd><a href="">考勤异常</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/4_u621_selected.svg}">
+					<span>通知公告</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a href="">发送通知</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/5_u619_selected.svg}">
+					<span>考勤机</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a href="">考勤机列表</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/6_u617_selected.svg}">
+					<span>广告发布</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a href="">启动页</a></dd>
+	      			<dd><a href="">公司信息</a></dd>
+	    		</dl>
+	  		</li>
+	  		<li class="layui-nav-item">
+	    		<a href="javascript:;">
+					<img alt="" th:src="@{/images/工勤宝管理系统/7_u631_selected.svg}">
+					<span>访客管理</span>
+				</a>
+	    		<dl class="layui-nav-child">
+	      			<dd><a href="">访客列表</a></dd>
+	    		</dl>
+	  		</li>
+		</ul>
+	</div>
+	
+	<div class="top_nav">
+		
+	</div>
+	
+	<div class="content_nav" layout:fragment="content_nav">
+		
+	</div>
+</body>
+</html>

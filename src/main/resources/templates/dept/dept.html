@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorate="~{layout/layout.html}" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/js/dept/dept.js}"></script>
+</head>
+<body>
+	<div layout:fragment="content_nav">
+		<div class="content_nav_children">
+			<div class="layui-inline">
+				<label class="layui-form-label">关键字 </label>
+				<div class="layui-input-inline">
+					<input type="text" id="deptName" lay-verify="required" autocomplete="off" class="layui-input">
+				</div>
+				<button class="layui-btn" data-type="reload">搜索</button>
+			</div>
+			
+			<table id="deptTable" lay-filter="deptTable"></table>
+			<script type="text/html" id="deptTableBar">
+  				<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  				<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+			</script>
+		</div>
+	</div>
+</body>
+</html>

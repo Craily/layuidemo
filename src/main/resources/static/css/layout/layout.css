@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+html,body{width: 100%;height: 100%;min-width: 1024px;min-height: 768px;overflow: auto;}
+
+.left_nav{width: 256px;height: 100%;background-color: #2F4056!important;float: left;}
+.top_nav{width:-moz-calc(100% - 256px);width:-webkit-calc(100% - 256px);width: calc(100% - 256px);height: 64px;background-color: #336699;float: left;}
+.login_info{width: 224px;height: 32px;padding: 16px 16px;}
+.login_name{font-weight: 400;font-style: normal;font-size: 16px;color: #FFFFFF;display: inline-block;vertical-align: middle;margin-left: 10px;}
+.u698{float: right;margin-top: 7px;margin-right: 10px;cursor: pointer;}
+.u698_menu{position: absolute;width: 80px;left: 180px;display: none;cursor: pointer;z-index: 9999999999;}
+.u698:hover {opacity: 0.8;}
+.layui-nav-width{width: 256px;}
+.layui-nav-tree>li>a>img{width: 18px; height: 18px;display: inline-block;vertical-align: middle;}
+.layui-nav-tree>li>a>span{display: inline-block;vertical-align: middle;margin-left: 10px;}
+.layui-nav-tree .layui-nav-child a{padding: 0 20px 0 60px;}
+.content_nav{background-color: #E1E6F6;float: left;width:-moz-calc(100% - 276px);width:-webkit-calc(100% - 276px);width: calc(100% - 276px);height: -moz-calc(100% - 84px);height:-webkit-calc(100% - 84px);height: calc(100% - 84px);padding: 10px;overflow: auto;}
+.content_nav_children{}

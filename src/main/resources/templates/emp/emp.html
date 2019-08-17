@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorate="~{layout/layout.html}" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/js/emp/emp.js}"></script>
+</head>
+<body>
+	<div layout:fragment="content_nav">
+		<div class="content_nav_children">
+			<div class="layui-form">
+				<div class="layui-inline">
+					<label class="layui-form-label">姓名</label>
+					<div class="layui-input-inline">
+						<input type="text" id="empName" lay-verify="required" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">所属部门</label>
+					<div class="layui-input-inline">
+						<select id="deptNo" name="deptNo" lay-filter="deptNo">
+						</select>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<button class="layui-btn" data-type="reload">搜索</button>
+				</div>
+			</div>
+			
+			<table id="empTable" lay-filter="empTable"></table>
+
+			<script type="text/html" id="empTableBar">
+				<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="beRole">任命</a>
+				<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+				<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+			</script>
+		</div>
+	</div>
+</body>
+</html>
